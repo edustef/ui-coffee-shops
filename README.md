@@ -17,13 +17,13 @@ App runs at http://localhost:5173
 
 ## Scripts
 
-| Command | What it does |
-|---------|-------------|
-| `npm run dev` | Start dev server |
-| `npm run build` | Type-check + production build |
-| `npm run lint` | Run ESLint |
-| `npm run preview` | Preview production build |
-| `npm run test:e2e` | Run Playwright E2E tests |
+| Command            | What it does                  |
+| ------------------ | ----------------------------- |
+| `npm run dev`      | Start dev server              |
+| `npm run build`    | Type-check + production build |
+| `npm run lint`     | Run ESLint                    |
+| `npm run preview`  | Preview production build      |
+| `npm run test:e2e` | Run Playwright E2E tests      |
 
 ## Playwright
 
