@@ -20,7 +20,6 @@ export function Filters() {
       <Field
         label="X"
         value={positionX}
-        defaultValue={''}
         inputMode="decimal"
         onChange={setPositionX}
         error={positionXError}
@@ -28,12 +27,11 @@ export function Filters() {
       <Field
         label="Y"
         value={positionY}
-        defaultValue={''}
         inputMode="decimal"
         onChange={setPositionY}
         error={positionYError}
       />
-      <Field label="Name" value={name} defaultValue={''} onChange={setName} />
+      <Field label="Name" value={name} onChange={setName} />
     </div>
   )
 }

@@ -11,7 +11,6 @@ interface FieldProps extends Omit<ComponentProps<'input'>, 'onChange'> {
 
 export function Field({
   label,
-  defaultValue,
   onChange,
   error,
   inputMode,
@@ -19,21 +18,22 @@ export function Field({
   ...restProps
 }: FieldProps) {
   return (
-    <label className="flex flex-col gap-1">
-      <span className="text-gray-700 text-lg font-bold">{label}</span>
+    <label className="flex flex-wrap items-center gap-2">
+      <span className="w-12 shrink-0 text-left md:text-right text-gray-700 text-lg font-bold">
+        {label}
+      </span>
       <input
         type="text"
         inputMode={inputMode}
-        defaultValue={defaultValue}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         className={cn(
-          'rounded-md border px-3 py-2 text-lg outline-none transition-colors',
-          error ? 'border-red-500' : 'border-gray-300 focus:border-blue-500',
+          'flex-1 rounded-md border px-3 py-2 text-lg outline-none transition-colors',
+          error ? 'border-red-500' : 'focus:border-blue-500',
         )}
         {...restProps}
       />
-      {error && <span className="text-xs text-red-500">{error}</span>}
+      {error && <span className="w-full pl-14 text-xs text-red-500">{error}</span>}
     </label>
   )
 }
