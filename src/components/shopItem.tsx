@@ -7,12 +7,18 @@ interface Props {
   distance?: number
 }
 
+const fmt = new Intl.NumberFormat(undefined, {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+})
+
 export function ShopItem({ name, position, distance, isHighlighted }: Props) {
   return (
     <li className={`p-4 rounded ${isHighlighted ? 'text-blue-500' : 'text-black'}`}>
       <h2 className="text-xl font-semibold">{name}</h2>
       <p className="text-lg">
-        {position.x}, {position.y} {distance && `- ${distance}`}
+        {fmt.format(position.x)}, {fmt.format(position.y)}
+        {distance != null && ` - ${fmt.format(distance)}`}
       </p>
     </li>
   )
