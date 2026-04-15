@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-indie: 'Indie Flower', cursive;
+}
+
+body {
+  font-family: var(--font-indie);
+}
