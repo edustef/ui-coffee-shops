@@ -2,9 +2,7 @@ import type { Shop } from '../lib/api'
 import { euclideanDistance, type Position } from './distance'
 
 export function getFilteredShops(shops: Shop[], name: string, position?: Position) {
-  const filtered = shops.filter((shop) =>
-    shop.name.toLowerCase().includes(name.toLowerCase()),
-  )
+  const filtered = shops.filter((shop) => shop.name.toLowerCase().includes(name.toLowerCase()))
 
   if (!position) {
     return filtered
@@ -17,5 +15,3 @@ export function getFilteredShops(shops: Shop[], name: string, position?: Positio
     }))
     .toSorted((a, b) => a.distance - b.distance)
 }
-
-export type FilteredShop = ReturnType<typeof getFilteredShops>[number]
