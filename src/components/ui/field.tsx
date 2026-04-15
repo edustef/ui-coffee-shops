@@ -19,7 +19,7 @@ export function Field({
 }: FieldProps) {
   return (
     <label className="flex flex-wrap items-center gap-2">
-      <span className="w-12 shrink-0 text-left md:text-right text-gray-700 text-lg font-bold">
+      <span className=" shrink-0 text-left md:text-right text-gray-700 text-lg font-bold">
         {label}
       </span>
       <input
