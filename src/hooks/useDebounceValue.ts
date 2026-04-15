@@ -2,7 +2,7 @@ import { useState, useEffect, type Dispatch, type SetStateAction } from 'react'
 
 export function useDebounceValue<T>(
   initialValue: T,
-  delay: number,
+  delay: number = 300,
 ): [T, Dispatch<SetStateAction<T>>] {
   const [rawValue, setRawValue] = useState(initialValue)
   const [debouncedValue, setDebouncedValue] = useState(initialValue)
