@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { fetchShops } from '../lib/api
+import { fetchShops } from '../lib/api'
 
 const MAX_RETRIES = 3
 
