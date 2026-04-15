@@ -18,7 +18,7 @@ export function ShopItem({ name, position, distance, isHighlighted }: Props) {
       <h2 className="text-xl font-semibold">{name}</h2>
       <p className="text-lg">
         {fmt.format(position.x)}, {fmt.format(position.y)}
-        {distance != null && ` - ${fmt.format(distance)}`}
+        {distance != null && ` · ${fmt.format(distance)}`}
       </p>
     </li>
   )
