@@ -2,12 +2,15 @@ import type { Shop } from '../lib/api'
 import { euclideanDistance, type Position } from './distance'
 
 export function getFilteredShops(shops: Shop[], name: string, position?: Position) {
+  const filtered = shops.filter((shop) =>
+    shop.name.toLowerCase().includes(name.toLowerCase()),
+  )
+
   if (!position) {
-    return shops
+    return filtered
   }
 
-  return shops
-    .filter((shop) => shop.name.toLowerCase().includes(name.toLowerCase()))
+  return filtered
     .map((shop) => ({
       ...shop,
       distance: euclideanDistance(shop.position, position),
