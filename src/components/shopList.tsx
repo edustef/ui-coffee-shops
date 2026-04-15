@@ -26,6 +26,10 @@ export function ShopList({ className }: Props) {
 
   const filteredShops = getFilteredShops(shops, name, inputPosition)
 
+  if (filteredShops.length === 0) {
+    return <p className="text-gray-500">No coffee shops found matching "{name}".</p>
+  }
+
   return (
     <ul className={cn('w-full p-2 border rounded-lg', className)}>
       {filteredShops.map(({ id, ...rest }, index) => (
