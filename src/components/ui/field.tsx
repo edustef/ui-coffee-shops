@@ -28,7 +28,7 @@ export function Field({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         className={cn(
-          'rounded-md border px-3 py-2 text-sm outline-none transition-colors',
+          'rounded-md border px-3 py-2 text-lg outline-none transition-colors',
           error ? 'border-red-500' : 'border-gray-300 focus:border-blue-500',
         )}
         {...restProps}
