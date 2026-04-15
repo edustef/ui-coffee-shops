@@ -20,7 +20,7 @@ export function Field({
 }: FieldProps) {
   return (
     <label className="flex flex-col gap-1">
-      <span className="text-sm font-medium text-gray-700">{label}</span>
+      <span className="text-gray-700 text-lg font-bold">{label}</span>
       <input
         type="text"
         inputMode={inputMode}
